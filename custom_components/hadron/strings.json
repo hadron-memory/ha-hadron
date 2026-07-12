@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a Hadron webhook",
+        "description": "Paste the trigger URL printed by `hadron webhook create` (or the Hadron portal). The platform token (hpt) is shown once alongside it — paste it here, or leave the token field empty if it is already embedded in the URL as `?hpt=…`.",
+        "data": {
+          "url": "Trigger URL",
+          "token": "Platform token (hpt)",
+          "name": "Name (optional)"
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "This is not a Hadron trigger URL — expected https://SERVER/hooks/SECRET/NAME.",
+      "token_required": "No platform token found. Paste the hpt token shown when the webhook was created (or rotate the webhook to get a new one)."
+    },
+    "abort": {
+      "already_configured": "This Hadron webhook is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hadron options",
+        "data": {
+          "enable_callback": "Request a result callback by default (needs an externally reachable Home Assistant URL)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "last_run": {
+        "name": "Last run"
+      }
+    }
+  }
+}

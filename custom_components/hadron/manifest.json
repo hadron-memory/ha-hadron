@@ -1,0 +1,13 @@
+{
+  "domain": "hadron",
+  "name": "Hadron Memory",
+  "codeowners": ["@shadowbrush"],
+  "config_flow": true,
+  "dependencies": ["webhook"],
+  "documentation": "https://github.com/shadowbrush/ha-hadron",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/shadowbrush/ha-hadron/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
