@@ -12,7 +12,7 @@
       }
     },
     "error": {
-      "invalid_url": "This is not a Hadron trigger URL — expected https://<server>/hooks/<secret>/<name>.",
+      "invalid_url": "This is not a Hadron trigger URL — expected https://SERVER/hooks/SECRET/NAME.",
       "token_required": "No platform token found. Paste the hpt token shown when the webhook was created (or rotate the webhook to get a new one)."
     },
     "abort": {
