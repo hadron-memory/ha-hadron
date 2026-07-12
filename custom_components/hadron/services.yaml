@@ -1,0 +1,31 @@
+trigger:
+  name: Trigger
+  description: >-
+    Fire a Hadron webhook, starting a headless run on the Hadron server.
+    Returns the run id immediately (the run itself is asynchronous); listen
+    for the hadron_run_finished event or watch the entry's last-run sensor
+    for the result.
+  fields:
+    config_entry:
+      name: Hadron webhook
+      description: Which configured Hadron webhook to trigger.
+      required: true
+      selector:
+        config_entry:
+          integration: hadron
+    args:
+      name: Arguments
+      description: >-
+        JSON object passed to the run as arguments (merged into the run's
+        event data). Use it to hand Home Assistant state to the task.
+      example: '{"room": "office", "occupancy": true}'
+      selector:
+        object:
+    callback:
+      name: Result callback
+      description: >-
+        Override the entry's default: request (or suppress) the result
+        callback that fires hadron_run_finished when the run ends. Requires
+        an externally reachable Home Assistant URL.
+      selector:
+        boolean:
